@@ -2,6 +2,7 @@ package com.nopcommerce.demo.browserfactory;
 
 import com.nopcommerce.demo.propertyreader.PropertyReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,6 +20,7 @@ public class ManageBrowser {
 
     public ManageBrowser() {
         PageFactory.initElements(driver, this);
+        PropertyConfigurator.configure(System.getProperty("user.dir")+"/src/test/java/resources/propertiesfile/log4j2.properties");
     }
 
     public void selectBrowser(String browser){

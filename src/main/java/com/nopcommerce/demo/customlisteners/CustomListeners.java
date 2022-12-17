@@ -28,6 +28,7 @@ public class CustomListeners implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
         test.log(Status.PASS, "TEST CASE PASSED IS " + iTestResult.getName());
+
     }
 
     @Override
